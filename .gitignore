@@ -1,3 +1,16 @@
 __pycache__
 .vscode
 _config.yml
+
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments (if applicable, from prior context)
+auto-dcf/
+
+# Other common ignores
+*.log
+.idea/  # If using an IDE like PyCharm
