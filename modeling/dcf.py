@@ -10,7 +10,7 @@ def DCF(ticker, ev_statement, income_statement, balance_statement, cashflow_stat
     see enterprise_value() for details on arguments. 
 
     args:
-        see enterprise value for more info...
+        see enterprise value for more info... 
 
     returns:
         dict: {'share price': __, 'enterprise_value': __, 'equity_value': __, 'date': __}
@@ -56,10 +56,13 @@ def historical_DCF(ticker, years, forecast, discount_rate, earnings_growth_rate,
     dcfs = {}
 
     income_statement = get_income_statement(ticker = ticker, period = interval, apikey = apikey)['financials']
+    # print(income_ statement)
     balance_statement = get_balance_statement(ticker = ticker, period = interval, apikey = apikey)['financials']
+    # print(balance_statement)
     cashflow_statement = get_cashflow_statement(ticker = ticker, period = interval, apikey = apikey)['financials']
+    # print(cashflow_statement)
     enterprise_value_statement = get_EV_statement(ticker = ticker, period = interval, apikey = apikey)
-    print(enterprise_value_statement[0])
+    # print(enterprise_value_statement)
 
     if interval == 'quarter':
         intervals = years * 4
