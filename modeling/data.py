@@ -45,7 +45,7 @@ def get_jsonparsed_data(url):
     return json_data
 
 
-def get_EV_statement(ticker, period='annual', apikey=''):
+def get_EV_statement(ticker, period='annual', apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch EV statement, with details like total shares outstanding, from FMP.com
 
@@ -59,7 +59,7 @@ def get_EV_statement(ticker, period='annual', apikey=''):
 
 
 #! TODO: maybe combine these with argument flag for which statement, seems pretty redundant tbh
-def get_income_statement(ticker, period='annual', apikey=''):
+def get_income_statement(ticker, period='annual', apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch income statement.
 
@@ -74,7 +74,7 @@ def get_income_statement(ticker, period='annual', apikey=''):
     return get_jsonparsed_data(url)
 
 
-def get_cashflow_statement(ticker, period='annual', apikey=''):
+def get_cashflow_statement(ticker, period='annual', apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch cashflow statement.
 
@@ -89,7 +89,7 @@ def get_cashflow_statement(ticker, period='annual', apikey=''):
     return get_jsonparsed_data(url)
 
 
-def get_balance_statement(ticker, period='annual', apikey=''):
+def get_balance_statement(ticker, period='annual', apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch balance sheet statement.
 
@@ -104,7 +104,7 @@ def get_balance_statement(ticker, period='annual', apikey=''):
     return get_jsonparsed_data(url)
 
 
-def get_stock_price(ticker, apikey=''):
+def get_stock_price(ticker, apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetches the stock price for a ticker
 
@@ -119,7 +119,7 @@ def get_stock_price(ticker, apikey=''):
     return get_jsonparsed_data(url)
 
 
-def get_batch_stock_prices(tickers, apikey=''):
+def get_batch_stock_prices(tickers, apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch the stock prices for a list of tickers.
 
@@ -136,7 +136,7 @@ def get_batch_stock_prices(tickers, apikey=''):
     return prices
 
 
-def get_historical_share_prices(ticker, dates, apikey=''):
+def get_historical_share_prices(ticker, dates, apikey='IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'):
     """
     Fetch the stock price for a ticker at the dates listed.
 
@@ -172,6 +172,6 @@ if __name__ == '__main__':
     """ quick test, to use run data.py directly """
 
     ticker = 'AAPL'
-    apikey = '<DEMO>'
+    apikey = 'IXQFOAGU5PzJdUDkA8Ab6ROPOT9CQk6D'
     data = get_cashflow_statement(ticker=ticker, apikey=apikey)
     print(data)
