@@ -22,7 +22,7 @@ def get_historical_ebit_cagr(ticker_symbol: str, min_years=3) -> float:
     tk = yf.Ticker(ticker_symbol)
     fin = tk.financials
     if fin is None or fin.empty:
-        raise RuntimeError("No financials found for " + ticker_symbol)
+        raise RuntimeError("No financials found for " + str(ticker_symbol))
 
     # Try common EBIT labels
     for label in ("Operating Income", "EBIT", "Ebit"):
