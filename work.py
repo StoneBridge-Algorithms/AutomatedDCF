@@ -6,8 +6,9 @@ from sec_edgar_downloader import Downloader
 from bs4 import BeautifulSoup
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from extract_mdna import fetch_mdna_text
+from dotenv import load_dotenv
+load_dotenv()
 
-0
 # ── CONFIG ─────────────────────────────────────────────────────────────────────
 OUTPUT_DIR = "./sec_edgar_filings"
 MDNA_MAX_CHARS = 4000
